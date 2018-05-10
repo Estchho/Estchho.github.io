@@ -8,7 +8,7 @@ body{
 }
 
 a{
-    color: #ffffff; 
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -103,10 +103,10 @@ a{
     line-height: 74.54px;/* Приближение из-за подстановки шрифтов */
     text-align: left;
     padding-left: 28px;
-    
+
 }
 
-/* 
+/*
 .menu__link:first-letter,
 .menu__link:nth-child(4){
     text-transform: uppercase;
@@ -122,16 +122,16 @@ a{
     color: #ffffff;
     display: flex;
     align-items: flex-start;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
 }
 
 .main__content{
-    margin-left: 226px;
     display: flex;
     align-items: flex-end;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
+    width: 45%;
 }
 
 .main__title{
@@ -220,12 +220,12 @@ a{
 /*section pink */
 
 .pink{
-    background: url(images/Shape\ 2.png) 50% -7.5% no-repeat, 
+    background: url(images/Shape\ 2.png) 50% -7.5% no-repeat,
     url(images/Layer\ 29.png);
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 564px;
@@ -265,7 +265,7 @@ a{
 }
 
 .pink__buttom:hover{
-    background-color: #ffd4d4;    
+    background-color: #ffd4d4;
 }
 
 /*section pencil*/
@@ -285,7 +285,7 @@ a{
     width: 648px;
     height: 269px;
     margin-top: 95px;
-    margin-left: 102px; 
+    margin-left: 102px;
 }
 
 .pencil__tittle{
@@ -321,7 +321,7 @@ a{
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -379,7 +379,7 @@ a{
 .photo{
     width: 100%;
     height: 670px;
-    background: linear-gradient(to bottom, transparent, #2e2e2e), url(images/Layer\ 27.png); 
+    background: linear-gradient(to bottom, transparent, #2e2e2e), url(images/Layer\ 27.png);
     background-size: cover;
     display: flex;
     justify-content: flex-end;
@@ -441,7 +441,7 @@ a{
 
 .watch{
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 
 }
 
@@ -450,7 +450,7 @@ a{
     width: 648px;
     height: 269px;
     margin-top: 114px;
-    margin-right: 73px; 
+    margin-right: 73px;
 }
 
 .watch__tittle{
@@ -538,4 +538,11 @@ a{
     font-weight: 400;
     line-height: 26px;/* Приближение из-за подстановки шрифтов */
     text-align: left;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 0 auto;
 }
