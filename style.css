@@ -28,13 +28,13 @@ a{
 
 .logo{
     display: flex;
-    width: 182px;
+    width: 15%;
     height: 21px;
 }
 
 .header__imgbig{
-    width: 41px;
-    height: 21px;
+    width: auto;
+    height: 100%;
 }
 
 .header__imglittle{
@@ -173,10 +173,11 @@ a{
     justify-content: center;
     margin-bottom: 18px;
 }
-.main__button:hover{
-    background-color:  #a631f5;
+.button:hover{
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
 .main__description{
+    color: rgb(255, 255, 255, 0.8);
     font-size: 12px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     line-height: 17px;/* Приближение из-за подстановки шрифтов */
@@ -187,17 +188,19 @@ a{
 /*section features*/
 
 .features{
-    color: #ffffff;
+    color: rgb(255, 255, 255, 0.8);
     background: #2a384d;
     width: 100%;
     height: 511px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .features__content{
     width: 70%;
+    height: 511px;
     margin: 0 auto;
     padding-top: 79px;
     display: flex;
@@ -226,7 +229,7 @@ a{
     text-align: left;
     transform: scaleY(1.0017);
     text-transform: uppercase;
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 }
 
 .features__description{
@@ -235,7 +238,7 @@ a{
     line-height: 26px;/* Приближение из-за подстановки шрифтов */
     text-align: left;
     transform: scaleY(1.0017);
-    margin-bottom: 68px;
+    margin-bottom: 58px;
 }
 
 /*section pink */
@@ -243,7 +246,7 @@ a{
 .pink{
     background: url(images/Shape\ 2.png) 50% -7.5% no-repeat, 
     url(images/Layer\ 29.png);
-    color: #ffffff;
+    color: rgb(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -251,6 +254,16 @@ a{
     width: 100%;
     height: 564px;
 }
+
+.pink__content{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
 
 .pink__tittle{
     font-size: 34.98px;/* Приближение из-за подстановки шрифтов */
@@ -272,7 +285,7 @@ a{
     margin-bottom: 31px;
 }
 
-.pink__buttom{
+.pink__button{
     color:  #d54c63;
     font-size: 17.96px;/* Приближение из-за подстановки шрифтов */
     font-weight: 700;
@@ -285,28 +298,27 @@ a{
     height: 62px;
 }
 
-.pink__buttom:hover{
+.pink__button:hover{
     background-color: #ffd4d4;    
 }
 
 /*section pencil*/
 
 .pencil{
+    background: url(images/photo-1434030216411-0b793f4b4173.png) no-repeat;
+    background-position: left;
     width: 100%;
     height: 496px;
     display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
-.pencil__img{
-    height: 496px;
-}
-
-.pencil__text{
-    color:  #3a4d60;
-    width: 648px;
-    height: 269px;
-    margin-top: 95px;
-    margin-left: 102px; 
+.pencil__content{
+    color:  rgb(55, 76, 96, 0.9);
+    width: 55%;
+    margin-left: auto;
+    
 }
 
 .pencil__tittle{
@@ -346,6 +358,15 @@ a{
     flex-direction: column;
 }
 
+.purple__content{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
 .purple__tittle{
     color:  #ffffff;
     font-size: 40px;/* Приближение из-за подстановки шрифтов */
@@ -355,8 +376,7 @@ a{
 }
 
 .purple__description{
-    width: 750px;
-    height: 54px;
+    width: 100%;
     color:  #a87bb7;
     font-size: 20px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
@@ -387,7 +407,7 @@ a{
 }
 
 .purple__specification{
-    color:  #d4c9d8;
+    color: rgb(255, 255, 255, 0.8);
     font-size: 11.95px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     line-height: 17px;/* Приближение из-за подстановки шрифтов */
@@ -409,11 +429,10 @@ a{
 }
 
 .photo__content{
-    width: 550px;
+    width: 45%;
     margin-bottom: 89px;
-    margin-left: 210px;
+    margin-right: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -444,8 +463,8 @@ a{
 }
 
 .photo__img{
-    width: 45px;
-    height: 45px;
+    height: 100%;
+    width: auto;
 }
 
 .photo__description{
@@ -461,17 +480,19 @@ a{
 /*section watch*/
 
 .watch{
+    background: url(images/Layer\ 26.png)no-repeat;
+    background-position: right;
+    height: 516px;
     display: flex;
-    justify-content: flex-end; 
-
+    align-items: center;
+    justify-content: center; 
 }
 
-.watch__text{
+.watch__content{
     color:  #3a4d60;
-    width: 648px;
+    width: 55%;
     height: 269px;
-    margin-top: 114px;
-    margin-right: 73px; 
+    margin-right: auto;
 }
 
 .watch__tittle{
@@ -501,22 +522,23 @@ a{
 /*section feedback*/
 
 .feedback{
-    background: linear-gradient(to bottom, #e8516b 50%, #2e3b4e 50%);
+    background:  #e8516b;
     width: 100%;
-    height: 827px;
+    height: 460px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback__content{
+    width: 35%;
+    height: 154px;
+    margin-top: 78px; /* не придумал как на флексе сделать небольшой отступ*/
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-}
-
-.feedback__maincontent{
-    width: 390px;
-    height: 154px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 78px;
-    margin-left: 210px;
 }
 
 .feedback__tittle{
@@ -551,12 +573,20 @@ a{
     margin: 0;
 }
 
-.feedback__specification{
-    margin-left:211px;
-    margin-top:200px;
-    color:  #ffffff;
+
+
+.copyright{
+    background: #2e3b4e ;
+    width: 100%;
+    height:367px;
+}
+
+.copyright__description{
+    padding-top: 45px;
+    color: rgb(255, 255, 255, 0.8);
     font-size: 12px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     line-height: 26px;/* Приближение из-за подстановки шрифтов */
     text-align: left;
+    
 }
