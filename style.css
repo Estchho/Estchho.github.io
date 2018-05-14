@@ -26,6 +26,8 @@ a{
 }
 
 .header__content{
+    width: 84.8%;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -98,9 +100,9 @@ a{
 }
 
 .menu__search{
-    position: absolute;
+    /*position: absolute;
     top: 29px;
-    right: 35px;
+    right: 35px;*/
     border: 1px solid #f2f2f2;
     background-color:  #ffffff;
     border-radius: 31px;
