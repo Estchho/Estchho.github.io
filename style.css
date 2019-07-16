@@ -1,652 +1,160 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body{
-    width: 100%;  
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    max-width: 1367px;
+    margin: 0 auto;
 }
 
-a{
-    color: #ffffff; 
+*{
+    color: #fff;
+    list-style: none;
     text-decoration: none;
+    box-sizing:border-box;
+    
 }
 
-
-/*header*/
-.header{
-    position: absolute;
-    width: 100%;
-    height: 102px;
+header{
+    position:sticky;
+    top: 0;
+    margin: 0 48px -46px;
+    height: 43px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #382837;
+    border-bottom: 2px rgb(255, 255, 255, 0.2) solid;
+}
+.header__logo{
+    margin-left: 20px;
 }
 
-.header__content{
-    width: 84.8%;
-    margin-left: auto;
+.header__nav{
+    width: 691px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
-.logo{
-    display: flex;
-    width: 15%;
-    height: 21px;
-}
-
-.header__imgbig{
-    width: auto;
-    height: 100%;
-}
-
-.header__imglittle{
-    width: auto;
-    height: 55%;
-    margin-top: 3px;
-    margin-left: 9px;
-}
-
-.menu{
-    margin-left: auto;
-}
-
-.hamburger-menu{
-    display: none;
-    position: relative;
-    color: #ffffff;
-}
-
-.hamburger-menu__list{
-    display: none;
+.header__nav__link{
+    color: #fff;
     list-style: none;
-    margin: 0; 
-    padding: 0;
-    position: absolute;
-    text-align: right;
-    right: 35px;
 }
 
-.hamburger-menu__link{
-    padding: 10px 40px;
-    display: block;
-    text-decoration: none;
-    background-color: rgb(255, 255, 255, 0.4);
-}
-
-.hamburger-menu__link:hover{
-    background-color: #eee;
-    color: #333;
-}
-
-#checkbox-hamburger-menu:checked + .hamburger-menu__list{
-    display: block;
-}
-
-
-
-.menu__list{
+.header__tool{
     display: flex;
+}
+.header__tool_phone{
+    margin: 0 20px;
+}
+.main{
+    background-image: url(img/Main_bg.jpg);
+    margin: 0 auto;
+    border: 2px blue solid;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.main__middle__logo{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    list-style: none;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    display: inline-block;
+    background-color: #fff;
+    width: 608px;
+    height: 316px;
+    margin-bottom: 80px;
+}
+.video_button{
+    width: 86px;
+    height: 86px;
+    border: 10px solid #203260;
+    border-radius: 50%;
+    background: url(img/button_tri.svg) no-repeat center;
+}
+.video_button::before{
+    content: url(img/video_txt.svg); 
+    position: absolute; 
+     
 }
 
-.menu__item{
-    margin-right: 50px;
-}
-
-.menu__item:nth-child(5),
-.menu__item:nth-child(6){
-    margin-right: 35px;
-}
-
-.menu__link{
-    font-size: 13px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 24px;/* Приближение из-за подстановки шрифтов */
-    text-align: right;
-    position: relative;
-}
-
-
-.menu__link::after{
-    content:"";
-    background-color:  #ffffff;
-    position: absolute;
-    top: 300%;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(10px);
-}
-
-.menu__link:hover::after{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.menu__search{
-    /*position: absolute;
-    top: 29px;
-    right: 35px;*/
-    border: 1px solid #f2f2f2;
-    background-color:  #ffffff;
-    border-radius: 31px;
-    width: 220px;
-    height: 44px;
-    color:  #626161;
-    font-size: 12px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 74.54px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    
-    
-}
-
-/* 
-.menu__link:first-letter,
-.menu__link:nth-child(4){
-    text-transform: uppercase;
+/*
+.video_button_txt{
+    margin-left: -120px;
+    margin-top: -50px;
+    transform: rotate(-90deg);
+    transform: rotate3d(5deg);
+    color: #203260;
 }
 */
 
-.container {
-    width: 100%;
-    max-width: 1210px;
-    padding: 0 30px;
-    margin: 0 auto;
-}
 
-
-
-/*section main*/
-
-.main{
-    background-image: url(images/Layer\ 25.png);
-    background-size: cover;
-    height: 100vh;
-    color: #ffffff;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center; 
-    flex-direction: column;
-}
-
-.main__content{
-    width: 45%;
-    margin-right: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-    flex-direction: column;
-}
-
-.main__title{
-    width: 100%;
-    font-size: 49.98px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 69.938px;/* Приближение из-за подстановки шрифтов */
-    text-align: right;
-    transform: scaleY(1.0005);
-    margin-bottom: 50px;
+.main__button_box{
+   width: 90%;
+   border: 2px green solid;
+   display: flex;
+   margin: 0 auto;
 }
 
 .main__button{
-    color: #ffffff;
-    font-size: 17.96px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 60px;/* Приближение из-за подстановки шрифтов */
-    text-align: right;
-    transform: scaleY(1.0023);
-    background-color:  #8824cd;
-    border-radius: 31px;
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
-    width: 280px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
+    background-color: #6289D9;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
 }
-
-.button{
-    transition: all 0.6s ease;
-}
-
-.button:hover{
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-}
-
-.main__description{
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 12px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 17px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-}
-
-
-/*section features*/
-
-.features{
-    color: rgb(255, 255, 255, 0.8);
-    background: #2a384d;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.features__content{
-    width: 70%;
+.main__button:nth-child(2){
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
-    padding-top: 79px;
-    display: flex;
-    justify-content: space-between;
-
+}
+.main__button:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background-color: rgb(98, 137, 217, 0.3);
+    border-radius: 50px;
 }
 
-
-.features__list{
-    margin-bottom: 79px;
-    list-style: none;
+.sections__nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    height: 119px;
+    border: 2px green solid;
+}
+.sections__nav__item{
+    display: flex;
+    flex-direction: column;
+    color: #203260;
+    background-color: none;
+    border: none;
+}
+.catalog{
+    width: 1110px;
+    height: 960px;
+    margin: 0 auto;
+}
+
+.catalog__box{
+    background-color: #F5F8FB;
+}
+
+.catalog__box__items{
+    width: 880px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
 }
 
-.features__item{
-    width: 47.5%;
-}
-
-.features__title{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    transform: scaleY(1.0017);
-    text-transform: uppercase;
-    margin-bottom: 24px;
-}
-
-.features__description{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    transform: scaleY(1.0017);
-    margin-bottom: 58px;
-}
-
-/*section pink */
-
-.pink{
-    background: url(images/Shape\ 2.png) 50% -7.5% no-repeat, 
-    url(images/Layer\ 29.png);
-    color: rgb(255, 255, 255, 0.8);
+.catalog__box__item{
+    width: 16%;
+    height: 200px;
+    color: #203260;
     display: flex;
-    align-items: center;
-    justify-content: center; 
     flex-direction: column;
-    width: 100%;
-    min-height: 564px;
+    align-items: center;
+    justify-content: center;
     
 }
-
-.pink__content{
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;
-}
-
-
-.pink__tittle{
-    font-size: 34.98px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 60px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-    transform: scaleY(1.0005);
-    padding: 0;
-    margin: 0;
-}
-
-.pink__description{
-    width: 450px;
-    height: 42px;
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-    margin-bottom: 31px;
-}
-
-.pink__button{
-    color:  #d54c63;
-    font-size: 17.96px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 60px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-    transform: scaleY(1.0023);
-    border-radius: 31px;
-    background-color: #ffffff;
-    width: 341px;
-    height: 62px;
-}
-
-.pink__button:hover{
-    background-color: #ffd4d4;    
-}
-
-/*section pencil*/
-
-.pencil{
-    /*background: url(images/photo-1434030216411-0b793f4b4173.png) no-repeat;
-    background-position: left;*/
-    background: #ffffff;
-    width: 100%;
-   
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-.pencil__content{
-    color:  rgb(55, 76, 96, 0.9);
-    width: 100%;
-   
-    
-}
-
-.pencil__tittle{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.pencil__description{
-    margin-top: 0;
-    font-size: 19px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 31px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-.pencil__specification{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-/*section purple*/
-
-.purple{
-    width: 100%;
-    height: 550px;
-    background: url(images/Rectangle\ 7.png) 100% 94px repeat-x, url(images/Layer\ 12.png);
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;
-}
-
-.purple__content{
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;
-}
-
-.purple__tittle{
-    color:  #ffffff;
-    font-size: 40px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 48px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-}
-
-.purple__description{
-    width: 100%;
-    color:  #a87bb7;
-    font-size: 20px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 33px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-    margin-bottom: 38px;
-}
-
-.purple__button{
-    color: #ffffff;
-    font-size: 17.96px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 60px;/* Приближение из-за подстановки шрифтов */
-    text-align: right;
-    transform: scaleY(1.0023);
-    background-color:  #8824cd;
-    border-radius: 31px;
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
-    width: 280px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-.purple__button:hover{
-    background-color:  #a631f5;
-}
-
-.purple__specification{
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 11.95px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 17px;/* Приближение из-за подстановки шрифтов */
-    text-align: center;
-    transform: scaleX(1.0041);
-}
-
-/* section photo*/
-
-.photo{
-    width: 100%;
-    height: 670px;
-    background: linear-gradient(to bottom, transparent, #2e2e2e), url(images/Layer\ 27.png); 
-    background-size: cover;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.photo__content{
-    width: 45%;
-    margin-bottom: 89px;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.photo__button{
-    border: solid 2px #ffffff;
-    border-radius: 31px;
-    background-color:  rgba(129, 180, 65, 0);
-    width: 135px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.photo__tittle{
-    color:  #ffffff;
-    font-size: 40px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 50px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-.photo__imgbox{
-    height: 45px;
-    display: flex;
-}
-
-.photo__img{
-    height: 100%;
-    width: auto;
-}
-
-.photo__description{
-    color:  #ffffff;
-    font-size: 13px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 600;
-    line-height: 40px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    margin-left: 15px;
-    margin-top: 2px;
-}
-
-/*section watch*/
-
-.watch{
-    /*background: url(images/Layer\ 26.png)no-repeat;
-    background-position: right;*/
-   
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-.watch__content{
-    color:  #3a4d60;
-    width: 100%;
-    /*height: 269px;*/
-    margin-right: auto;
-}
-
-.watch__tittle{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.watch__description{
-    margin-top: 0;
-    font-size: 19px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 31px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-.watch__specification{
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-/*section feedback*/
-
-.feedback{
-    background:  #e8516b;
-    width: 100%;
-    padding-top: 78px;
-    min-height: 460px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-
-.feedback__content{
-    width: 35%;
-    /* height: 154px;
-    margin-top: 78px; не придумал как на флексе сделать небольшой отступ*/
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.feedback__tittle{
-    color:  #ffffff;
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 700;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0 0 15px 0;
-}
-
-.feedback__description{
-    color:  #ffffff;
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 25px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.feedback__mail{
-    color:  #ffffff;
-    font-size: 15px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-decoration: underline;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-}
-
-.copyright{
-    background: #2e3b4e ;
-    width: 100%;
-    min-height:367px;
-}
-
-.copyright__description{
-    padding-top: 45px;
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 12px;/* Приближение из-за подстановки шрифтов */
-    font-weight: 400;
-    line-height: 26px;/* Приближение из-за подстановки шрифтов */
-    text-align: left;
-}
-
-@media screen and (max-width: 900px) {
-    .menu,
-    .pencil__img,
-    .watch__img{
-        display: none;
-    }
-    .hamburger-menu{
-        display: block;
-    }
-}
-
